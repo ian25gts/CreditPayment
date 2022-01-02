@@ -1,9 +1,7 @@
 import static java.lang.Math.pow;
 
 public class CreditPaymentService {
-    public double calculate (int term) {
-        int credit = 1_000_000;
-        double procent = 9.99;
+    public double calculate (int term, int credit, double procent) {
         double monthProcent = procent / 100 / 12; // расчет ежемесячного процента
         double mps = 1 + monthProcent; // формула расчета
         double psv = pow(mps, term) - 1;
